@@ -1,0 +1,7 @@
+{
+  "item.example_mod.fabric_item": "A fabric item",
+
+  "tooltip.example_mod.fabric_item": "My very first fabric item",
+
+  "itemGroup.example_mod.general": "Example Mod: General"
+}

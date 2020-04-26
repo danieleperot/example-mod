@@ -1,10 +1,9 @@
 package net.fabricmc.example.items;
 import net.fabricmc.example.Definitions;
+import net.fabricmc.itemgroups.General;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
@@ -19,10 +18,7 @@ public class FabricItem extends Item
 {
     public FabricItem()
     {
-        super(new Item.Settings()
-            .group(ItemGroup.MISC)
-            /* .food(new FoodComponent.Builder().hunger(20).build()) */
-        );
+        super(new Item.Settings().group(General.ItemGroup));
     }
 
     public static Identifier ID()
@@ -39,6 +35,6 @@ public class FabricItem extends Item
 
     @Override
     public void appendTooltip(ItemStack itemStack, World world, java.util.List<Text> tooltip, TooltipContext tooltipContext) {
-        tooltip.add(new TranslatableText("item.tutorial.fabric_item.tooltip"));
+        tooltip.add(new TranslatableText("tooltip.example_mod.fabric_item"));
     }
 }
