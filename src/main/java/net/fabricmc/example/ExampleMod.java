@@ -1,6 +1,8 @@
 package net.fabricmc.example;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.example.items.FabricItem;
+import net.minecraft.util.registry.Registry;
 
 public class ExampleMod implements ModInitializer {
 	@Override
@@ -10,5 +12,7 @@ public class ExampleMod implements ModInitializer {
 		// Proceed with mild caution.
 
 		System.out.println("Hello Fabric world!");
+		
+		Registry.register(Registry.ITEM, FabricItem.ID(), new FabricItem());
 	}
 }
